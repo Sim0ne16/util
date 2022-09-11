@@ -12,6 +12,8 @@ export class SideBarComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
+
+
   constructor(private observer: BreakpointObserver) {}
 
   ngAfterViewInit() {

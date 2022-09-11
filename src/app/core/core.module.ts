@@ -9,6 +9,8 @@ import {BrowserModule} from "@angular/platform-browser";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDividerModule} from "@angular/material/divider";
+import {LibraryModule} from "../features/library/library.module";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import {MatDividerModule} from "@angular/material/divider";
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    LibraryModule,
+    MatTooltipModule,
   ],
   exports: [
   FooterComponent,

@@ -16,36 +16,33 @@
 <mat-sidenav-container>
 
   <mat-sidenav #sidenav="matSidenav" >
-    <img class="avatar mat-elevation-z8" src="https://media-exp1.licdn.com/dms/image/C4D03AQGXbJDZNuSkUw/profile-displayphoto-shrink_800_800/0/1649078373622?e=1668038400&v=beta&t=fHl6JJxgjYPW15yHJA2eK1yrpHwgWf3K8Dk4c8LalkU" />
+    <img class="avatar mat-elevation-z8" src="../../../../assets/img/1649078373622.jfif" />
 
     <h4 class="name">Simone Giampà </h4>
     <p class="designation">Software Engineer</p>
 
     <mat-divider></mat-divider>
     <button mat-button class="menu-button">
-      <mat-icon>home</mat-icon>
-      <span>Home</span>
+      <mat-icon  matTooltip="Menu">home</mat-icon>
     </button>
     <button mat-button class="menu-button">
-      <mat-icon>person</mat-icon>
-      <span>Profile</span>
+      <mat-icon  matTooltip="Profile"> person</mat-icon>
     </button>
     <button mat-button class="menu-button">
-      <mat-icon>info</mat-icon>
-      <span>About</span>
+      <mat-icon  matTooltip="Info">info</mat-icon>
     </button>
 
     <mat-divider></mat-divider>
 
     <button mat-button class="menu-button">
-      <mat-icon>help</mat-icon>
-      <span>Help</span>
+      <mat-icon  matTooltip="Help">help</mat-icon>
     </button>
 
   </mat-sidenav>
   <mat-sidenav-content>
+
     <div class="content mat-elevation-z8">
-      Main content here!
+      <app-book-list></app-book-list>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
