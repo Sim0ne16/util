@@ -37,13 +37,25 @@ export class BookListComponent implements AfterViewInit {
 
 
   isDisabled: boolean = true;
+  position: number = 0;
 
 
-  insertName(inputName:any,position:number){
+
+  insertName(inputName:any){
+    ELEMENT_DATA[this.position-1]['name'] = inputName.value;
     inputName.value=''
     this.isDisabled = true;
-    position
+    inputName.placeholder = 'DISABLED';
 
+
+
+
+  }
+
+  modify(holder:any,pos:number){
+      this.isDisabled = false;
+      holder.placeholder = ' ';
+      this.position = pos;
   }
 
 
