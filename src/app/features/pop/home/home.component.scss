@@ -1,0 +1,26 @@
+form{
+  display: flex;
+  flex-direction: column;
+  width:10%;
+  justify-content: center;
+  text-align: center;
+  margin:10% 0 0 45%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+svg {
+  width:5%;
+  height:5%;
+  fill:red;
+
+}
+
+svg:hover{
+  fill:white;
+}
+
+

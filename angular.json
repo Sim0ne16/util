@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "seconTry": {
+    "AngularAssesment": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/secon-try",
+            "outputPath": "dist/angular-assesment",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,10 +28,12 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -70,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "seconTry:build:production"
+              "browserTarget": "AngularAssesment:build:production"
             },
             "development": {
-              "browserTarget": "seconTry:build:development"
+              "browserTarget": "AngularAssesment:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "seconTry:build"
+            "browserTarget": "AngularAssesment:build"
           }
         },
         "test": {
@@ -97,7 +99,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -107,6 +108,6 @@
     }
   },
   "cli": {
-    "analytics": "806a30d4-6a46-4011-8661-f60653b0251d"
+    "analytics": "fb6a669e-cc91-413d-8ce5-7f0db946ea66"
   }
 }
