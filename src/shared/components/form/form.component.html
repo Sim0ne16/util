@@ -1,0 +1,70 @@
+<div id="booking" class="section">
+  <div class="section-center">
+    <div class="container">
+      <div class="row m-3">
+        <div class="booking-form">
+          <div class="form-header">
+            <h1>Effettua la prenotazione</h1>
+          </div>
+          <form   [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+        </div>
+          <div class="row m-3">
+            <div class="col-md-6">
+              <div class="form-group" >
+                <span class="form-label">Check In</span>
+                <input class="form-control" type="date" formControlName="startDate" id="startDate" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <span class="form-label">Check out</span>
+                <input class="form-control" type="date"  formControlName="endDate" id="endDate" required>
+              </div>
+            </div>
+          </div>
+
+            <div class="row m-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <span class="form-label">Nome</span>
+                  <input class="form-control"  type="text" placeholder="Inserisci il tuo nome" formControlName="firstName">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <span class="form-label">Cognome</span>
+                  <input class="form-control" type="text" placeholder="Inserisci il tuo cognome" formControlName="lastName">
+                </div>
+              </div>
+
+            </div>
+            <div class="form-btn d-flex justify-content-end m-4">
+              <button class="btn btn-primary" data-bs-toggle="modal" [disabled]="!form.valid" data-bs-target="#exampleModal">Book Now</button>
+            </div>
+          </form>
+          <h1>Giorni prenotati : {{this.giorniPrenotati}} </h1>
+          <h1>Totale Costo: {{this.costoTotale}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Hai prenotato una vacanza!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" >Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

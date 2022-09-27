@@ -1,0 +1,18 @@
+<form [formGroup]="filter">
+
+  <label for="filtern"> Filtra </label><br>
+  <input type="checkbox" formControlName="filtern" id="filtern" name="filtern" value="">
+
+<div *ngIf="this.filter.value['filtern']">
+  <label for="value" >Prezzo inferiore a:</label>
+  <input id="value" formControlName="value" type="range" value="500" min="0" max="500"  oninput="this.nextElementSibling.value = this.value">
+  <output id="o1">{{this.filter.value['value']}}</output>
+
+  <label for="rating" >Votazione maggiore uguale a:</label>
+  <input id="rating" formControlName="rating" type="range" value="0" min="0" max="10" oninput="this.nextElementSibling.value = this.value">
+  <output id="o2">{{this.filter.value['rating']}}</output>
+</div>
+
+</form>
+<!--Sarebbe stato meglio passare direttamente il form al componente figlio ma sono un programmatore vero e non mi va di rifattorizzare  -->
+<app-card [costFilter]="this.filter.value['value']" [filtern]="this.filter.value['filtern']" [rating]="this.filter.value['rating']" [datasource]= 'hotels' (cardEmitter)="showDetails($event)"></app-card>

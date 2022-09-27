@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HeaderComponent} from "./layout/header/header.component";
-import { TranslateStrengthPipe } from './pipes/translate-strength.pipe';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import {RouterLinkWithHref} from "@angular/router";
 
 
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    TranslateStrengthPipe
-  ],
-  exports: [
-    HeaderComponent,
-    TranslateStrengthPipe
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [
+        NavbarComponent
+    ],
+    exports: [
+        NavbarComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterLinkWithHref
+    ]
 })
 export class CoreModule { }

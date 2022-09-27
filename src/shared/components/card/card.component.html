@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+
+      <div *ngFor="let element of datasource; let i = index">
+        <div *ngIf="this.filtern;else noFilter">
+
+        <div *ngIf="element.price < this.costFilter">
+          <div *ngIf="element.rating >= this.rating">
+                <div class="card m-3" style="width: 100%;">
+                    <div class="card-body d-flex">
+
+                        <div class="col-4  justify-content-start" >
+                          <img [src]= "element.pathphoto" class="card-img-top" width="30rem" height="20rem">
+                        </div>
+                      <div id="info" class="col-6 ">
+                        <h5 class="card-title">{{element.name}}</h5>
+                        <p class="card-text">Indirizzo: {{element.address}}</p>
+                        <p class="card-text">Citta' : {{element.city}}</p>
+                       </div>
+                      <div id="infop" class=" col-2 d-flex flex-column justify-content-end">
+                        <p class="card-text">Prezzo: {{element.price}}€/notte</p>
+                        <p class="card-text">Voto: {{element.rating}}/10</p>
+
+                        <a class="btn btn-primary" (click)="setPrice(element.price)" routerLink="../reservation">Prenota</a>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+          </div>
+      </div>
+
+        <ng-template #noFilter>
+            <div class="card m-3" style="width: 100%;">
+              <div class="card-body d-flex">
+
+                <div class="col-4  justify-content-start" >
+                  <img [src]= "element.pathphoto" class="card-img-top" width="30rem" height="20rem">
+                </div>
+                <div id="info1" class="col-6 ">
+                  <h5 class="card-title">{{element.name}}</h5>
+                  <p class="card-text">Indirizzo: {{element.address}}</p>
+                  <p class="card-text">Citta' : {{element.city}}</p>
+                </div>
+                <div id="infop1" class=" col-2 d-flex flex-column justify-content-end">
+                  <p class="card-text">Prezzo: {{element.price}}€/notte</p>
+                  <p class="card-text">Voto: {{element.rating}}/10</p>
+                  <a class="btn btn-primary" (click)="setPrice(element.price)" routerLink="../reservation">Prenota</a>
+                </div>
+              </div>
+          </div>
+
+        </ng-template>
+
+
+
+      </div>
+    </div>
+</div>
+
+
+
+
+
