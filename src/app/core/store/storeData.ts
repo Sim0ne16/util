@@ -61,10 +61,14 @@ export class storeData{
   private _hotels:HotelModel[] = HOTELS;
   private _cost = costPerNight
   private _city = city
+  private _cloneHotel:HotelModel[] = Object.assign([],HOTELS)
 
 
-  getCity(): string {
-    return this._city;
+
+
+
+  getClone(){
+    return this._cloneHotel
   }
 
   setCity(value: string) {
@@ -73,10 +77,6 @@ export class storeData{
 
   getHotels(): HotelModel[] {
     return this._hotels;
-  }
-
-  setHotels(value: HotelModel[]) {
-    this._hotels = value;
   }
 
 

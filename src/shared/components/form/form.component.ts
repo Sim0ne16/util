@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {storeData} from "../../../app/core/store/storeData";
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-form',
@@ -16,12 +17,23 @@ export class FormComponent implements OnInit {
   costoNotte!: number ;
   costoTotale : number = 0;
 
-  constructor(private fb:FormBuilder,private store:storeData) {
+  today:Date = new Date();
+  todayS!:string
+
+
+  dateMin = new Date().toISOString().split('T')[0]
+  dateMinCheckout =  new Date(new Date().setDate(new Date().getDate()+1)).toISOString().split('T')[0]
+
+
+  constructor(private fb:FormBuilder,private store:storeData,datePipe:DatePipe) {
+
+    this.todayS = this.today.toISOString().split('T')[0]
+    console.log(this.todayS)
     this.form = this.fb.group({
         firstName: this.fb.control('',Validators.required),
         lastName: this.fb.control('',Validators.required),
-        startDate: this.fb.control('',Validators.required),
-        endDate: this.fb.control('',Validators.required),
+        startDate: this.fb.control('',[Validators.required]),
+        endDate: this.fb.control('',[Validators.required]),
       }
     )
     this.costoNotte = this.store.getCost()
@@ -49,7 +61,7 @@ export class FormComponent implements OnInit {
   onSubmit() {
     this.calculateDiff()
     this.calculateCost()
-    console.log('costo totale:' + this.costoTotale)
+    console.log('formato data ' + this.form.value.startDate )
 
   }
 

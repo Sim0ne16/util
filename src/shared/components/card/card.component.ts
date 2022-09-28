@@ -20,7 +20,8 @@ export class CardComponent implements OnInit {
 
   @Input() filtern:boolean = false
 
-  constructor(private store:storeData) { }
+  constructor(private store:storeData) {
+  }
 
   ngOnInit(): void {
   }
@@ -28,4 +29,10 @@ export class CardComponent implements OnInit {
   setPrice(price : number) {
     this.store.setCost(price)
   }
+
+
+
+
+
+
 }

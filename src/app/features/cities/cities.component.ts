@@ -35,7 +35,5 @@ export class CitiesComponent implements OnInit {
     this.route.navigateByUrl('home/Napoli')
   }
 
-  goToHome() {
-    this.route.navigateByUrl('home')
-  }
+
 }

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {CoreModule} from "./core/core.module";
 import {FeaturesModule} from "./features/features.module";
+import {DatePipe} from "@angular/common";
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import {FeaturesModule} from "./features/features.module";
         CoreModule,
         FeaturesModule,
     ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
