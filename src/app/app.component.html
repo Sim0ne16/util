@@ -1,17 +1,9 @@
-<div class="app-wrapper">
- <header>
-   <app-header
-   (buttonTableClicked)="showTable($event)"></app-header>
- </header>
+<app-header></app-header>
+
 <main>
-  <app-home
-  [isTable]="isTable"
-  [profileForm]="form"
-  (buttonModifyClicked)="hideTable(false)"
-  ></app-home>
+  <router-outlet></router-outlet>
 </main>
 
 
+<ngx-spinner type="ball-scale-multiple">Loading . . .</ngx-spinner>
 
-
-</div>

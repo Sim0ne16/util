@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@900&display=swap');
+
+#popCards{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+}
+
+
+
+.mat-list-item{
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.mat-list-base .mat-list-item{
+  height: 30px;
+  margin-bottom:10px;
+}
+
+.mat-card-content{
+  margin-bottom:10px;
+}
+
+.mat-card-actions{
+  display:flex;
+  justify-content: center;
+  padding:0;
+}
+
+
+.example-card {
+  max-width: 230px;
+  margin:50px;
+}
+
+.example-header-image {
+  background-image: url('https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png');
+  background-size: cover;
+}

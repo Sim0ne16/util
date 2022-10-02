@@ -1,21 +1,11 @@
-0<div id="wrapper">
-<nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container-fluid">
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a (click)="onButtonTableClicked(true)" class="nav-link active" type="button">Lista Pop</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" (click)="onButtonTableClicked(false)" type="button">Aggiungi/Modifica Pop</a>
-        </li>
-      </ul>
-    </div>
-    <img id="logo" src="../../../../assets/img/Marvel-Logo.webp">
-  </div>
-</nav>
-</div>
+<header>
+  <mat-toolbar color="warn">
+
+    <button routerLink='home' routerLinkActive="active" mat-icon-button><mat-icon class="icon-display">home</mat-icon></button>
+    <button routerLink='pop-form' routerLinkActive="active" mat-icon-button><mat-icon class="icon-display">add_circle_outline</mat-icon></button>
+    <button routerLink='pop-card' routerLinkActive="active" mat-icon-button><mat-icon class="icon-display">ballot-icon</mat-icon></button>
+
+    <h1 id="logo">MARVEL</h1>
+  </mat-toolbar>
+
+</header>

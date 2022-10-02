@@ -1,0 +1,76 @@
+<div id="wrapper">
+
+
+<form  *ngIf="formAdd" [formGroup]="formAdd">
+  <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput id="name" formControlName="name"  placeholder="Insert name...">
+      <mat-error *ngIf="formAdd.get('name')?.hasError('required')">
+        Name is <strong>required</strong>
+      </mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Age</mat-label>
+    <input type="number" matInput id="age" formControlName="age"  placeholder="Insert age...">
+    <mat-error *ngIf="formAdd.get('age')?.hasError('required')">
+      Age is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-label  class="form-label">Gender</mat-label>
+  <mat-radio-group  id="gender"  formControlName="gender" aria-label="Select an option">
+    <mat-radio-button value="M">M</mat-radio-button>
+    <mat-radio-button value="F">F</mat-radio-button>
+  </mat-radio-group>
+
+
+  <div formGroupName="stats">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Strength</mat-label>
+    <input type="number" matInput id="strength" formControlName="strength"  placeholder="Insert strength...">
+    <mat-error *ngIf="formAdd.get('stats.strength')?.hasError('required')">
+      Strength is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Agility</mat-label>
+    <input type="number" matInput id="agility" formControlName="agility"  placeholder="Insert agility...">
+    <mat-error *ngIf="formAdd.get('stats.agility')?.hasError('required')">
+      Agility is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Flexibility</mat-label>
+    <input type="number" matInput id="flexibility" formControlName="flexibility"  placeholder="Insert flexibility...">
+    <mat-error *ngIf="formAdd.get('stats.flexibility')?.hasError('required')">
+      Flexibility is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Stamina</mat-label>
+    <input type="number" matInput id="stamina" formControlName="stamina"  placeholder="Insert stamina...">
+    <mat-error *ngIf="formAdd.get('stats.stamina')?.hasError('required')">
+      Stamina is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Intellect</mat-label>
+    <input type="number" matInput id="intellect" formControlName="intellect"  placeholder="Insert intellect...">
+    <mat-error *ngIf="formAdd.get('stats.intellect')?.hasError('required')">
+      Intellect is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  </div>
+  <button id="submit" mat-stroked-button  (click)="onButtonAddClicked()">Submit</button>
+  </form>
+</div>
+
+
+
+

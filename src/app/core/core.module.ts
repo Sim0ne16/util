@@ -1,21 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {RouterLink, RouterLinkActive} from "@angular/router";
 import {HeaderComponent} from "./layout/header/header.component";
-import { TranslateStrengthPipe } from './pipes/translate-strength.pipe';
+import {MatIconModule} from "@angular/material/icon";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    TranslateStrengthPipe
-  ],
-  exports: [
-    HeaderComponent,
-    TranslateStrengthPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule,
+    MatToolbarModule,
+    RouterLink,
+    RouterLinkActive,
+    MatButtonModule,
+  ],
+  exports:[
+    HeaderComponent
   ]
 })
 export class CoreModule { }

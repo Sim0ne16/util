@@ -1,1 +1,37 @@
-/*# sourceMappingURL=header.component.css.map */
+
+
+
+header {
+  height: 50px;
+  max-height: 50px;
+  box-shadow: 10px 5px 5px white;
+}
+
+#logo{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  font-family: 'Maven Pro', sans-serif,bold;
+  font-size:230%;
+  letter-spacing:-6px;
+  border: white 2px solid ;
+  padding: 5px 8px ;
+  border-radius: 10%;
+  text-align: center;
+}
+
+
+.mat-toolbar.mat-warn{
+  color:black;
+}
+
+mat-toolbar {
+  height: 100% !important;
+}
+
+.icon-display {
+  transform: scale(1.5);
+}
+
+
+

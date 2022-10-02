@@ -1,0 +1,102 @@
+{
+  "pop": [
+    {
+      "id": 1,
+      "name": "Wonder woman",
+      "age": 22,
+      "gender": "F",
+      "stats": {
+        "strength": 70,
+        "agility": 81,
+        "flexibility": 70,
+        "stamina": 60,
+        "intellect": 70
+      },
+      "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTe265Rs0vmwGACZpQIeoJTuLEvXuwlgwHJLDaBVLBCY-0UwhVyL1HrhyWAaQHN-jVOnxLN60tSUfe4&usqp=CAc"
+    },
+    {
+      "id": 2,
+      "name": "Superman",
+      "gender": "M",
+      "stats": {
+        "strength": 90,
+        "agility": 60,
+        "flexibility": 60,
+        "stamina": 80,
+        "intellect": 40
+      },
+      "age": 30,
+      "img": "https://www.tradeinn.com/f/13840/138406492/funko-pop-dc-comics-superman-exclusive-chase-25-cm.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Rick",
+      "gender": "M",
+      "stats": {
+        "strength": 50,
+        "agility": 80,
+        "flexibility": 50,
+        "stamina": 50,
+        "intellect": 100
+      },
+      "age": 48,
+      "img": "https://m.media-amazon.com/images/I/51BNPRgbvKL._AC_SX522_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Flash",
+      "gender": "M",
+      "stats": {
+        "strength": 40,
+        "agility": 100,
+        "flexibility": 40,
+        "stamina": 80,
+        "intellect": 30
+      },
+      "age": 16,
+      "img": "https://anime-market.com/wp-content/uploads/2022/04/x_fk32116.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Violet",
+      "gender": "F",
+      "stats": {
+        "strength": 30,
+        "agility": 90,
+        "flexibility": 90,
+        "stamina": 30,
+        "intellect": 60
+      },
+      "age": 18,
+      "img": "https://i.ytimg.com/vi/uQDfbheB3J0/maxresdefault.jpg"
+    },
+    {
+      "id": 8,
+      "name": "2",
+      "age": 22,
+      "gender": "M",
+      "stats": {
+        "strength": 2,
+        "agility": 23,
+        "flexibility": 2,
+        "stamina": 23,
+        "intellect": 22
+      },
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmj8XV_w5dz1k1ug0u3fJw5OfZt7_cqRD7PqYYse8DHrPa7cgiplSAPMk2_ZqW5MeotJk&usqp=CAU"
+    },
+    {
+      "id": 10,
+      "name": "Federico",
+      "age": 27,
+      "gender": "M",
+      "stats": {
+        "strength": 98,
+        "agility": 9999999,
+        "flexibility": 99,
+        "stamina": 99,
+        "intellect": 99
+      },
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmj8XV_w5dz1k1ug0u3fJw5OfZt7_cqRD7PqYYse8DHrPa7cgiplSAPMk2_ZqW5MeotJk&usqp=CAU"
+    }
+  ]
+}

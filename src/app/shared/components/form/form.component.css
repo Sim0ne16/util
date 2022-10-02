@@ -1,0 +1,22 @@
+#wrapper{
+  width: 100%;
+  display:flex;
+  justify-content:center;
+
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+form{
+  border-radius: 3%;
+  width: 30%;
+  margin-top:10%;
+  background-color: white;
+  text-align:center
+}
+
+#submit{
+  margin-bottom:2%;
+}

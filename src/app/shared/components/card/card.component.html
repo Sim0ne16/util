@@ -1,0 +1,48 @@
+
+
+  <div *ngIf="Pops" id="popCards">
+  <div id="wrapper" *ngFor="let pop of Pops">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{pop.name}}</mat-card-title>
+        <mat-card-subtitle>{{pop.age}} years</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-xl-image src="{{pop.img}}"
+           alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <mat-list>
+          <div mat-subheader>Stats</div>
+          <mat-list-item>
+            <mat-icon mat-list-icon>priority_high</mat-icon>
+            <div mat-line>Strengths:  {{pop.stats.strength}}</div>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon mat-list-icon>priority_high</mat-icon>
+            <div mat-line>Agility: {{pop.stats.agility}}</div>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon mat-list-icon>priority_high</mat-icon>
+            <div mat-line>Flexibility: {{pop.stats.flexibility}}</div>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon mat-list-icon>priority_high</mat-icon>
+            <div mat-line>Stamina: {{pop.stats.stamina}}</div>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon mat-list-icon>priority_high</mat-icon>
+            <div mat-line>Intellect: {{pop.stats.intellect}}</div>
+          </mat-list-item>
+
+          <mat-divider></mat-divider>
+
+        </mat-list>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="onButtonDeleteClicked(pop.id)"><mat-icon>delete</mat-icon></button>
+        <button mat-button (click)="onButtonEditClicked(pop.id)"><mat-icon>edit</mat-icon></button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
