@@ -1,7 +1,12 @@
 package com.example.spikejunitmockito.DAL;
 
 
-import lombok.*;
+
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,11 +14,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name = "book_record")
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 @RequiredArgsConstructor
-//Grazie a questa annotazione possiamo usufruire del pattern Builder
-@Builder
 public class BookEntity {
 
 
@@ -21,10 +25,8 @@ public class BookEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NonNull
     private String name;
 
-    @NonNull
     private String summary;
 
     private Integer rating;

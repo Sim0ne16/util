@@ -1,4 +1,4 @@
-package com.example.spikejunitmockito;
+package com.example.spikejunitmockito.BLL;
 
 public class Calculator {
 

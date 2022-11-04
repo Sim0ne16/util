@@ -17,7 +17,6 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/book")
-@CrossOrigin(origins = "")
 public class BookController implements GenericController<BookRest> {
 
     private final BookService service;

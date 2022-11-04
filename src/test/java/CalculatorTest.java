@@ -1,4 +1,4 @@
-import com.example.spikejunitmockito.Calculator;
+import com.example.spikejunitmockito.BLL.Calculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
